@@ -108,6 +108,10 @@ code {
 }
 @media only screen and (max-width: 450px) {
     h1 {
-        font-size: 1.2em;
+        font-size: 1em;
+    }
+    .navbar-link-toggle {
+        font-size: 1.5em;
+        padding: 0.5em;
     }
 }
