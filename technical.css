@@ -4,32 +4,41 @@
 }
 body {
     line-height: 1.5;
+    font-family: 'Alef','Times New Roman', Times, serif;
+    font-size: 1.1em;
 }
 .flex-container {
     display: flex; 
+    
 }
 #navbar {
     display: flex;
     position: sticky;
     top: 0;
     flex-direction: column;
-    background-color: white;
+    background-color: rgba(233, 223, 243, 0.644);
     height: 100vh;
-    border-right: 2px solid rgba(88, 88, 88, 0.678);
+    border-right: 2px solid rgba(122, 2, 122, 0.753);
     align-items: left;
 }
 .nav-header {
     padding: 1em 2em;
+    color: rgb(221, 125, 0);
+}
+.navbar-link-toggle {
+    display: none
 }
 .nav-link {
     text-decoration: none;
-    color: black;
-    border-top: 1px solid;
+    color: rgb(221, 125, 0);
+    font-weight: 600;
+    border-top: 1px solid rgba(61, 9, 61, 0.753);
     padding: 1em 2em; 
 }
 .nav-link:hover {
-    background-color: rgb(131, 129, 129);
+    background-color:rgba(122, 2, 122, 0.753);
     color: white;
+    font-weight: 800;
 }
 #main-doc {
     margin: 1em;
@@ -38,7 +47,13 @@ body {
 p, li {
     padding: 0.5em;
 }
+
+div > p {
+    padding: 2em;
+}
 h2, h3 {
+    color: rgb(221, 125, 0);
+    border-top: 2px solid rgba(122, 2, 122, 0.753);
     padding: 1em 0.5em;
 }
 img {
@@ -46,18 +61,34 @@ img {
     width: 500px;
     height: auto; 
 }
+code {
+    background-color: rgba(233, 223, 243, 0.644);
+}
 
 @media only screen and (max-width: 1000px) {
     .flex-container {
         flex-direction: column;
-        
     }
     #navbar {
         height: auto;
         flex-direction: column;
+        background-color: rgb(233, 223, 243);
     }
     .nav-link {
-        padding: 0.5em 1em;
+        padding: 0.2em 1em;
+        display: none;
+    }
+    .navbar-link-toggle {
+        align-self: flex-end;
+        font-size: 2em;
+        padding: 0.4em;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+    }
+    .nav-header {
+        border: 2px solid;
+
     }
     img {
         width: 60%;
@@ -69,13 +100,9 @@ img {
     }
     .nav-link {
         padding: 0.2em 1em;
+        display: none;
     }
 }
 @media only screen and (max-width: 450px) {
-    .nav-link {
-        display: none;
-    }
-    .nav-header {
-        border: 1px solid;
-    }
+  
 }
